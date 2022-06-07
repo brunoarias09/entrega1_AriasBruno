@@ -1,20 +1,17 @@
 {% extends "redondos_app/padre.html" %}
 {% load static %}
 {% block contenidoQueCambia %}
-<h1> INTEGRANTES formularios</h1>
 
+<h1>FORMULARIO DE INTEGRANTES</h1>
 
-###esto es para hacer el formulario visible
-<h1>FORMULARIO DE integrantess</h1>
-
-<form action="{% url 'integranteFormulario' %}" method="POST">{% csrf_token %}
-
+<form action="{% url 'integrantesFormulario' %}" method="POST">{% csrf_token %}
+    <br>
         <table>
             {{miFormulario.as_p}}
         </table>
 
-    <input type='submit' value='enviar formulario api'>
+    <input type='submit' value='Enviar Formulario api'>
 <form>
 
 
-{% endblock %}
+{% endblock  %}

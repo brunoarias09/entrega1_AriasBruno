@@ -26,12 +26,12 @@ def recitales(request):
 def integrantesFormulario(request):
     if request.method == 'POST':
         miFormulario=IntegrantesFormulario(request.POST)
-        print(miFormulario)
 
-        if miFormulario.is_valid:
+        if miFormulario.is_valid():
             informacion=miFormulario.cleaned_data
-        integrantes=Integrantes(nombre=informacion['nombre'],apellido=informacion['apellido'])
-
+        nombre=informacion['nombre']
+        apellido=informacion['apellido']
+        integrantes=Integrantes(nombre=nombre, apellido=apellido)
         integrantes.save()
 
         return render(request, 'rendondos_app/inicio.html')
@@ -39,4 +39,4 @@ def integrantesFormulario(request):
     else:
         miFormulario=IntegrantesFormulario()
 
-    return render(request,'redondos_app/integrantes.html', {'miFormulario':miFormulario})
+    return render(request,'redondos_app/integrantesFormulario.html', {'miFormulario':miFormulario})
