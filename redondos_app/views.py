@@ -10,7 +10,7 @@ def inicio(request):
     return render(request,'redondos_app/inicio.html')
 
 def integrantes(request):
-    return render(request,'redondos_app/integrantes.html')
+    return render(request,'redondos_app/busquedaIntegrantes.html')
 
 def instrumentos(request):
     return render(request,'redondos_app/instrumentos.html')
@@ -34,9 +34,25 @@ def integrantesFormulario(request):
         integrantes=Integrantes(nombre=nombre, apellido=apellido)
         integrantes.save()
 
-        return render(request, 'rendondos_app/inicio.html')
+        return render(request, 'redondos_app/inicio.html')
 
     else:
         miFormulario=IntegrantesFormulario()
 
     return render(request,'redondos_app/integrantesFormulario.html', {'miFormulario':miFormulario})
+
+
+def busquedaIntegrantes(request):
+        return render(request, 'redondos_app/busquedaIntegrantes.html')
+
+
+def buscar(request):
+    #respuesta= {request.GET['camada']} para probar q andaba
+    if request.GET['nombre']:
+        nombre=request.GET['nombre']
+        apellido=Integrantes.objects.get(nombre=nombre)
+    
+        return render(request, 'redondos_app/resultadosBusqueda.html',{'nombre':nombre,'apellido':apellido.apellido})
+    else:
+        respuesta='no se ingreso nombre correcto'    
+    return HttpResponse(respuesta)

@@ -1,0 +1,20 @@
+{% extends "redondos_app/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+<h1>BUSQUEDA DE INTEGRANTES</h1>
+
+<form action="{% url 'buscar' %}" method="GET">
+
+
+
+    <h2> ingrese los datos del integrante</h2>
+    <input type="text" name="nombre" placeholder="NOMBRE" id="nombre">
+
+    <input type='submit' value='buscar'>
+<form>
+
+
+    
+
+{% endblock  %}
