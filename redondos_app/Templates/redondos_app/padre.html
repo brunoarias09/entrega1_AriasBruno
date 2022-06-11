@@ -27,21 +27,34 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="{% url 'integrantes' %}">integrantes</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'recitales' %}">recitales</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'compactos' %}">compactos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'instrumentos' %}">instrumentos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'integrantesFormulario' %}">integrantes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'recitalesFormulario' %}">recitales</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'compactosFormulario' %}">compactos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'instrumentosFormulario' %}">instrumentos</a></li>
 
                     </ul>
                 </div>
+                
             </div>
+            
         </nav>
         
         <!-- Masthead-->
         <header class="masthead">
+            
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+            
+                <div class="mx-auto my-0 text-uppercase">
+                    <div class="d-flex justify-content-center">
+                {% block contenidoTitulo %}
+                
+                    {% endblock %}
+                
+            </div>
+
+                {% block contenidoQueCambia %}
                 <div class="d-flex justify-content-center">
-                    {% block contenidoQueCambia %}
+                   
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">LOS REDONDOS</h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">LA BANDA MAS EMBLEMATICA DEL ROCK.</h2>

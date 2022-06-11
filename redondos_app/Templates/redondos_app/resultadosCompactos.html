@@ -1,0 +1,24 @@
+{% extends "redondos_app/padre.html" %}
+{% load static %}
+
+{% block contenidoTitulo %}
+<h3>Resultado de busqueda</h3>
+
+{% endblock %}
+<br>
+
+{% block  contenidoQueCambia%}
+<h5>
+    Resultado de la busqueda de Compactos: <br>Nombre: {{nombre}} <br>Año: {{año}}
+</h5>
+{% if nombre%}          <!-- Si encuentra lo buscado entra acá-->
+<ul> 
+    {% for nombre in nombre%}     <!-- ciclo for para ir mostrando los cursos que cumplen mi condición-->
+    <h6> {{nombre.nombre}}</h6> 
+    <br>                        <!-- Salto d linea-->
+    {% endfor%}
+</ul>
+{% endif %}
+
+
+{% endblock    %} 

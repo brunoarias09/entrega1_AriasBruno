@@ -3,16 +3,16 @@
 
 {% block contenidoTitulo %}
 
-<h1>Buscador de Integrantes</h1>
+<h1>Buscador de Compactos</h1>
 
 {% endblock %}
 
 {% block contenidoQueCambia %}
 
 
-<form action="{% url 'buscarIntegrante' %}" method="GET">
+<form action="{% url 'buscarCompacto' %}" method="GET">
 
-<h4> Ingrese el integrante que desea buscar</h4>
+<h4> Ingrese el Compacto que desea buscar</h4>
     <input type="text" name="nombre" placeholder="NOMBRE" id="nombre">
 
     <input type='submit' value='Buscar'>

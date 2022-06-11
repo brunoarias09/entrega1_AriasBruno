@@ -3,14 +3,14 @@
 
     <!--titulo-->
     {% block contenidoTitulo %}
-    <h2>Formulario de Integrante</h2>
+    <h2>Formulario de Compactos</h2>
     {% endblock %}
 
 <!--accion!-->
 {% block contenidoQueCambia %}
 
-<form action="{% url 'integrantesFormulario' %}" method="POST">{% csrf_token %}
-    <h3>Para ingresar un nuevo Integrante, <br>ingrese nombre y apellido:</h3>
+<form action="{% url 'compactosFormulario' %}" method="POST">{% csrf_token %}
+    <h3>Para ingresar un nuevo Compacto, <br>ingrese nombre y año:</h3>
 
         <table>
             {{miFormulario.as_p}}
@@ -19,8 +19,8 @@
 <form>
     <div class="container px-4 px-lg-5">
         <p class="">
-            <br>Si desea buscar algún integrante:
-            <a href="{% url 'busquedaIntegrantes'%}">clic aquí</a>
+            <br>Si desea buscar algún Compacto:
+            <a href="{% url 'busquedaCompactos'%}">clic aquí</a>
             .
         </p>
     </div>
