@@ -23,8 +23,12 @@ class Compactos(models.Model):
         return self.nombre + " " + str(self.año)
 
 class Recitales(models.Model):
-    lugar=models.CharField(max_length=30)
-    cantidadPublico=models.IntegerField()
+    nombre=models.CharField(max_length=30,null=True)
+    apellido=models.CharField(max_length=30,null=True)
+    fecha=models.DateField(null=True)
+    lugar=models.CharField(max_length=30,null=True)
+    anecdota=models.CharField(max_length=400,null=True)
 
     def __str__(self) -> str:
-        return self.lugar + " " + str(self.cantidadPublico)
+        return self.nombre +" "+self.apellido
+

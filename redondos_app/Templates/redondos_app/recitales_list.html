@@ -1,0 +1,38 @@
+{% extends "redondos_app/padre.html" %}
+{% load static %}
+
+{% block contenidoTitulo %}
+    <h2 class="text-white-50 mx-auto mt-2 mb-5">BLOG DE RECITALES</h2>
+    {% endblock %}
+
+{% block contenidoQueCambia %}
+<h2 class="text-white-50 mx-auto mt-2 mb-5">USUARIOS Y ANECDOTAS</h2>
+<FONT color="silver">{% if object_list %}</FONT>
+{% for recitales in object_list %}
+  <li><FONT color="silver">{{recitales}} </FONT></li>
+
+  <button>
+    <a href="{% url 'detalleRecitales' recitales.id %}">Ver más</a>
+</button>
+<button>
+    <a href="{% url 'editarRecitales' recitales.id %}">Editar</a>
+</button>
+<button>
+    <a href="{% url 'eliminarRecitales' recitales.id %}">Borrar</a>
+</button>
+
+{% endfor %} 
+{% else %}
+    <p>No hay recitales</p>
+    {% endif %}
+
+<br>
+<br>
+<button>
+    <a href="{% url 'crearRecitales' %}">Nuevo Post</a>
+</button>
+
+    
+    
+
+{% endblock %}

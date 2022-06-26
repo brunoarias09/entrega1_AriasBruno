@@ -1,0 +1,21 @@
+{% extends "redondos_app/padre.html" %}
+{% load static %}
+
+{% block contenidoTitulo %}
+    <h2>BLOG DE RECITALES</h2>
+    {% endblock %}
+
+{% block contenidoQueCambia %}
+<h1>SECCION RECITALES</h1>
+<div class="text-white-50 mx-auto mt-2 mb-5">
+<p class="text-white-50 mx-auto mt-2 mb-5">NOMBRE: {{recitales.nombre}}</p>
+<p class="text-white-50 mx-auto mt-2 mb-5">APELLIDO: {{recitales.apellido}}</p>
+<p class="text-white-50 mx-auto mt-2 mb-5">FECHA: {{recitales.fecha}}</p>
+<p class="text-white-50 mx-auto mt-2 mb-5">LUGAR: {{recitales.lugar}}</p>
+<p class="text-white-50 mx-auto mt-2 mb-5">ANECDOTA: {{recitales.anecdota}}</p>
+</div>
+<a href="{% url 'listaRecitales' %}">Volver</a>
+
+{% endblock %}
+
+

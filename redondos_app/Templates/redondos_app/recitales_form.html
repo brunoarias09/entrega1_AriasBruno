@@ -1,0 +1,18 @@
+{% extends "redondos_app/padre.html" %}
+{% load static %}
+<br>
+{% block contenidoTitulo %}
+
+    .
+    {% endblock %}
+
+{% block contenidoQueCambia %}
+<br>
+<h2 class="text-white-50 mx-auto mt-2 mb-5">SECCION RECITALES</h2>
+<form method="POST"> {% csrf_token %}
+<p class="text-white-50 mx-auto mt-2 mb-5"> Nuevo post: <br>
+    <FONT color="silver">{{ form.as_p }} </FONT>
+<input type="submit" value="enviar">
+</form>
+
+{% endblock %}

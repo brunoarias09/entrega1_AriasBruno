@@ -11,11 +11,11 @@
 <h5>
     Resultado de la busqueda de Compactos: <br>Nombre: {{nombre}} <br>Año: {{año}}
 </h5>
-{% if nombre%}          <!-- Si encuentra lo buscado entra acá-->
+{% if nombre%}         
 <ul> 
-    {% for nombre in nombre%}     <!-- ciclo for para ir mostrando los cursos que cumplen mi condición-->
+    {% for nombre in nombre%}     
     <h6> {{nombre.nombre}}</h6> 
-    <br>                        <!-- Salto d linea-->
+    <br>                        
     {% endfor%}
 </ul>
 {% endif %}

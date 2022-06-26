@@ -3,14 +3,16 @@
 
     <!--titulo-->
     {% block contenidoTitulo %}
-    <h2>Formulario de Compactos</h2>
+
+    <br>
+    <h2 class="text-white-50 mx-auto mt-2 mb-5">Formulario de Compactos</h2>
     {% endblock %}
 
 <!--accion!-->
 {% block contenidoQueCambia %}
 
 <form action="{% url 'compactosFormulario' %}" method="POST">{% csrf_token %}
-    <h3>Para ingresar un nuevo Compacto, <br>ingrese nombre y año:</h3>
+    <h3 class="text-white-50 mx-auto mt-2 mb-5">Para ingresar un nuevo Compacto, <br class="text-white-50 mx-auto mt-2 mb-5">ingrese nombre y año:</h3>
 
         <table>
             {{miFormulario.as_p}}
@@ -19,7 +21,7 @@
 <form>
     <div class="container px-4 px-lg-5">
         <p class="">
-            <br>Si desea buscar algún Compacto:
+            <p class="text-white-50 mx-auto mt-2 mb-5">Si desea buscar algún Compacto:
             <a href="{% url 'busquedaCompactos'%}">clic aquí</a>
             .
         </p>

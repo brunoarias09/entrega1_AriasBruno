@@ -1,0 +1,15 @@
+{% extends "redondos_app/padre.html" %}
+{% load static %}
+
+{% block contenidoTitulo %}
+    <h2 class="text-white-50 mx-auto mt-2 mb-5">BLOG DE RECITALES</h2>
+    {% endblock %}
+
+{% block contenidoQueCambia %}
+<h1 >SECCION RECITALES</h1>
+<form method="POST"> {% csrf_token %}
+Estas seguro que deseas eliminar el post? "{{object}}"
+<input type="submit"  value="SI">
+
+
+{% endblock %}
