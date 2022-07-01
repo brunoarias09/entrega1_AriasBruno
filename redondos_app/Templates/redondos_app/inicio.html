@@ -5,6 +5,20 @@
     <h1 class="mx-auto my-0 text-uppercase">LOS REDONDOS</h1>
     <h2 class="text-white-50 mx-auto mt-2 mb-5">LA BANDA MAS EMBLEMATICA DEL ROCK.</h2>
 </div>
+{% if request.user.is_authenticated %}
 
-<h3>{{mensaje}}</h3>
+<h3 class="text-center">{{mensaje}}</h3>
+{% else %}
+
+<div class="text-center">
+        si no estas registrado:          
+<a class=" navbar-brand "  href="{% url 'registro' %}">Registrate</a>
+</div>
+{% endif %}
+
+
 {% endblock %}
+
+
+
+

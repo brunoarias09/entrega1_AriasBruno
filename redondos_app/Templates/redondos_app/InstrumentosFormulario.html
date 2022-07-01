@@ -2,5 +2,8 @@
 {% load static %}
 {% block contenidoQueCambia %}
 <h1>INSTRUMENTOS</h1>
+{% for instrumentos in object_list %} 
+<li><FONT color="silver">{{instrumentos}} </FONT></li>
 
+{% endfor %}
 {% endblock %}

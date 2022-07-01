@@ -4,15 +4,15 @@
     <!--titulo-->
     
     {% block contenidoTitulo %}
-    <h2 class="text-white-50 mx-auto mt-2 mb-5">Formulario de Integrante</h2>
+    <h4 class="text-white-50 mx-auto mt-2 mb-5">Formulario de Integrante</h4>
     {% endblock %}
 
 <!--accion!-->
 {% block contenidoQueCambia %}
 
 <form action="{% url 'integrantesFormulario' %}" method="POST">{% csrf_token %}
-    <h3 class="text-white-50 mx-auto mt-2 mb-5">Para ingresar un nuevo Integrante, <br>ingrese nombre y apellido:</h3>
-
+    <h class="text-white-50 mx-auto mt-2 mb-5">Para ingresar un nuevo Integrante, <br>ingrese nombre y apellido:</h3><br>
+        <br>
         <table >
             <FONT color="silver">{{miFormulario.as_p}}</FONT>
         </table>

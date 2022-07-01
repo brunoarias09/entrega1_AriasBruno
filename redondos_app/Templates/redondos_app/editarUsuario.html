@@ -1,0 +1,14 @@
+{% extends "redondos_app/padre.html" %}
+{% load static %}
+{% block contenidoTitulo %}
+<h3>Edicion de usuario:</h3>
+<h1> {{usuario}}</h1>
+{% endblock %}
+{% block contenidoQueCambia %}
+<form action="" method="POST">{% csrf_token %}
+  <table>
+  <FONT color="silver">{{ form.as_p }}</FONT>
+</table>
+<input type='submit' value='Enviar Formulario'>
+</form>
+{% endblock %}

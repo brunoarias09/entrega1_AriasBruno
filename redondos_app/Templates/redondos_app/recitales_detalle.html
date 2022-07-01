@@ -2,17 +2,21 @@
 {% load static %}
 
 {% block contenidoTitulo %}
-    <h2>BLOG DE RECITALES</h2>
-    {% endblock %}
+<h4 class="text-white-50 mx-auto mt-2 mb-5">BLOG DE RECITALES</h4>
+{% endblock %}
 
 {% block contenidoQueCambia %}
-<h1>SECCION RECITALES</h1>
+
+<br>
+
+<h2 class="text-white-50 mx-auto mt-2 mb-5">SECCION RECITALES</h2>
 <div class="text-white-50 mx-auto mt-2 mb-5">
-<p class="text-white-50 mx-auto mt-2 mb-5">NOMBRE: {{recitales.nombre}}</p>
-<p class="text-white-50 mx-auto mt-2 mb-5">APELLIDO: {{recitales.apellido}}</p>
-<p class="text-white-50 mx-auto mt-2 mb-5">FECHA: {{recitales.fecha}}</p>
-<p class="text-white-50 mx-auto mt-2 mb-5">LUGAR: {{recitales.lugar}}</p>
-<p class="text-white-50 mx-auto mt-2 mb-5">ANECDOTA: {{recitales.anecdota}}</p>
+
+    <li>NOMBRE: {{recitales.nombre}}</li>
+    <li>APELLIDO: {{recitales.apellido}}</li>
+    <li>FECHA: {{recitales.fecha}}</li>
+    <li>LUGAR: {{recitales.lugar}}</li>
+    <li>ANECDOTA: {{recitales.anecdota}}</li>
 </div>
 <a href="{% url 'listaRecitales' %}">Volver</a>
 

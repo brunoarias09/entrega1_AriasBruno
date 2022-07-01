@@ -33,3 +33,14 @@ class Meta:
     model= User
     fields=['username','email','password1','password2']
     help_texts = {k:"" for k in fields }
+
+
+class UserEditForm(UserCreationForm):
+    email=forms.EmailField(required=True)
+    password1=forms.CharField(label="contraseña",widget=forms.PasswordInput)
+    password2=forms.CharField(label="confirmar contraseña",widget=forms.PasswordInput)
+
+class Meta:
+    model= User
+    fields=['username','email','password1','password2']
+    help_texts = {k:"" for k in fields }
