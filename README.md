@@ -1,4 +1,4 @@
-# entrega1_AriasBruno
+# entregaFinal_AriasBruno
 
 El Trabajo que realice, es sobre la banda de rock nacional mas influente de los ultimos tiempos.
 
